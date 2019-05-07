@@ -74,12 +74,7 @@ int main(int argc, char *argv[]) {
     }
 
     /* Read from stdin and send to server */
-    char buffer[BUFSIZ];
-    while (fgets(buffer, BUFSIZ, stdin)) {
-        fputs(buffer, client_file);
-        fgets(buffer, BUFSIZ, client_file);
-        fputs(buffer, stdout);
-    }
+    
 
     fclose(client_file);
     return EXIT_SUCCESS;
